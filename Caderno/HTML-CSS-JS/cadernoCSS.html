@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Caderno CSS</title>
+		<link rel="stylesheet" href="../reset.css">
+		<link rel="stylesheet" href="../Caderno.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header class="cabecalho">
+			<a href=../acesso-menu.html>
+				<img class="livro" src="IMG/caderno.png" alt="caderno">
+			</a>
+				<ul class="cabecalho__nav">
+					<li><a class="HTMLnav" href="CadernoHTML.html">HTML</a></li>
+					<li><a class="CSSnav" href="cadernoCSS.html">CSS</a></li>
+					<li><a class="JSnav" href="cadernoJS.html">Javascript</a></li>
+				</ul>
+		</header>
+
+		<main classe=anotações>
+			<h1 class="cadernoCSS"><em>Caderno CSS</em></h1>
+
+			<P>CSS inline=é uma das formas da programação em css na qual ñ chama diretamente o css, mas sim o elemento dentro de uma tag Style, ele é demorado e exige que o programador aplique a cada paragrafo</P>
+
+			<p>Style=aplica uma nova caracteristica visual em uma unica tag</p>
+
+			<P>Para aplicar mais de uma caracteristica visual, é necessario usar ponto e virgula</P>
+
+			<p>A tag ^Style^ é colocada dentro do head pois lá podemos atribuir de forma mais rapida a uma caracteristica dentro do proprio HTML</p>
+
+			<p>Utilizando a tag link a um arquivo de estilo separado, podemos atribuir os mesmos estilos em diversas paginas sem ter que ligalas a arquivos diferentes ou até mesmo refazer style por style usando o CSS inline</p>
+
+			<p>Para colorir toda uma pagina, é necessario o arquivo externo do estilo e colocar o background dentro do body</p>
+
+			<p>O codigo de cores funciona da seguinte maneira # e seis numeros, os dois primeiros definem o vermelho, os 3 e o 4 definem o Verde e os dois ultimos definem o azul</p>
+
+			<p>Para dar aplicar um comando para uma tag de linha especifica no arquivo a parte, é usado uma ID(identificação que é colocada ao lado da tag) essa ID permite darmos um nome para aquela linha e assim referencia-la no arquivo externo sem interferir nas tags semelhantes, lá no arquivo CSS para utilizarmos, usamdos o # seguido pelo nome dado atraves do comando ID</p>
+
+			<p>Da mesma forma que o id, existe uma forma de aplicalá a uma lista, mas de forma diferente, utilizando o Class onde nomeamos os itens da lista e em seguida damos a propriedade no arquivo CSS, lá referenciamos a Classe usando .(nome da classe) a diferença da classe para o Id é que o id é utilizado para itens unicos enquanto a classe para itens mais diversos</p>
+
+			<p>Inline e block são comportamentos das linhas, block é quando o texto bloqueia o conteudo da linha mesmo ele ocupando só metade, já o comportamento inline não permite o espaçamento interno ou externo, para utilizar ambas, existe o compartamento inline-block</p>
+
+			<p>Para aplicar uma imagem na pagina é usada a tag IMG e logo após ela é dada a informação de onde esta a imagem no computador, visando ser um arquivo externo, mas para isso, ñ é usado o href mas sim o <strong>src</strong> que é a abreviação de source, essa tag tbm se aplica a outros arquivos de imagem como png ou gif</p>
+
+			<p>Uso de devtools é muito importante para ter uma noção de teste por parte do CSS</p>
+
+			<p>Margin e padding podem ser configurados usando uma ordem especificas sem a necessidade de especificar cada direção delas, a ordem é topo, direita, baixo, esquerda</p>
+
+			<p>Existe um arquivo feito pela comunidade CSS chamado de reset.css esse arquivo limpa configurações indesejadas da pagina como por exemplo uma borda que vc quer deixar em uma cor diferente no topo da pagina</p>
+
+			<p>Existe varias variações de borda que podemos fazer pelo CSS, desde aplicar borda em apenas um lado do conteudo com border-(direção) e caracteristica dela, mas existe uma declaração unificada e exemplificada de bordar, colocando border: grosura estilo cor. isso facilita muito na hora de criar uma borda</p>
+
+			<p>Existem certos caracteres especificos que não conseguimos utilizar normalmente, mas há um site na qual puxa esses caracteres para um código facil para o navegador ler</p>
+			<p><a href="https://unicode-table.com/pt/">Unicode</a></p>
+
+			<p>Para fazer uma mudança aplicada com ação do mouse sobre é utilizado quase da mesma forma que a normalmente colocada no CSS, você coloca a tag que quer alterar, só que invés de usar as{} em seguida, você coloca dois pontos e escreve "hover" que é o comando que é identificado pela pagina como mudança ao colocar o mouse sobre, por fim é colocado as {} para colocar as caracteristicas visuais que serão alteradas segundo o "hover"</p>
+
+			<p>Assim como o hover existe uma mudança que podemos aplicar ao ter a interação do mouse, quando clicado no conteudo marcado, só que invés de colocar hover é colocado o comando Active</p>
+
+			<p>Para colocar uma imagem como background é usado a mesma caracteristica visual, mas invés de colocar o codigo da cor ou até mesmo o nome da cor, é usado um camando chamado url() e dentro dos parentesses é colocado o nome do arquivo de imagem, ao ser colocado, é necessario certificar de que a imagem cabe completamente no site, caso contrario ele será copiado e colado para preencher todo o site, criando um efeito espelhado, melhor dizendo</p>
+
+			<p>Se tratando de colocar as mesmas configurações para mais de um item, pode se usar a virgula entre os itens no codigo, por exemplo:Item1 , Item 2{caracteristicas}</p>
+
+			<p>O CSS tem uma espécie de hierarquia aplicada de acordo com o que é colocado no HTML, onde uma id é o topo, uma classe é o meio e uma tag é a menor de todas, quando referenciamos uma tag com um caracteristica e referenciamos essa mesma tag com uma outra tag na qual ela está dentro e com uma caracteristica oposta a primeira feita, essa segunda será priorizada, pois ela é quem tem a força de duas tag e ela é acima de uma tag normal, mas continua abaixo de uma classe. Para uma forma mais simples de analisar, segue um exemplo matematico, onde ID é 100, calsse é 50 e tag é 1, quando temos duas tags elas meio que somam esse valor assim sendo 2 e sendo assim maior que uma unica tag. Apenas uma coisa é maior que o um ID que é a configuração CSS Inline e isso se deve por estar diretamente no elemento, no exemplo matematico ela seria igual a 1000 e nada consegue sobrepor essa prioridade no CSS</p>
+
+			<p>Vale ressaltar que o CSS é um efeito em cascata então uma caracteristica sempre será ofuscado pela mesma caracterisca que estiver abaixo dela, por isso, há formas de contornar isso, colocando ambas as caracteriscas na mesma linha</p>
+
+			<p>Existe uma caracterista de tamanho, chamda "em" que tem o objetivo de dar sempre um tamanho em questão de multiplicação a algo, por exemplo,q quer que um texto tenha destaque no tamanho sendo duas vexes maior que as outras letras, então é colocado da seguinte forma, font-size: 2em; e assim é feito essa caracteristica</p>
+
+			<p>Para colocar os comentarios em uma linha, usamos o codigo /* */</p>
+
+			<p>Para mudarmos uma tipografia do site, usamos um método especifico e um site tambem, chamado google font(link abaixo) esse site oficial da google tem toda uma cadeia enorme de fontes para usar no html e css, por ser algo mais grafico, a unica coisa que colocamos no html é o link com relação stylesheet e o href com o link que o google fonts oferece ao escolher uma tipografia, junto disso, é necessario colocar no CSS um codigo que coloca a nova tipografia </p>
+			<p><a href="https://fonts.google.com/?noto.lang=cs_Latn&noto.script=Grek">Google Fonts</a></p>
+
+			<p>Existe codigos já apresentados que são conhecidas como pseudo propriedades, sendo elas :hover, :active :visited(usada para links) :required, first/last/nth-child(para dar uma aplicação diferente ao primeiro/ultimo/qualquer(com uso de parenteses no final com a numeração do afetado e tbm tem uma função de 2n na qual pegara todos os pares da classe) classificado sem a necessidade de dar uma nova classe a ele e copiar as mesma caracteristica de seus "irmãos")</p>
+
+			<p>O uso do inline-block utiliza de todas as linhas incluindo os espaços em branco, para se usar uma area completa, é necessario apagar esses espaços em branco entre os itens afetados pela propriedade citada, deixando amabas na mesma linha e coladas</p>
+
+			<p>Pseudo elementos são elementos que criamos via CSS e não existem no HTML,elas vão na frente de uma seleção como o hover etc. por exemplo:first-letter(pra selecionar a primeira letra de um texto), first-line(para a primeira linha), after(aplica um caractere que não é lido como um HTML, mas sim CSS), before(funciona da mesma forma que o After, a diferença é que before aplica antes do texto HTML e o After aplica depois do texto, outra coisa que é importante ressaltar é que amabas funcionam apenas com a caracteristica visual Content), not(esse aplica uma excesão no que vai receber um CSS deixando a excesão entre parenteses ao lado do not)</p>
+
+			<p>A seleção especificada é usada com caracteres especificos entre os elementos, um como ancora e o outro como alvo, dentre esses caracteres tem o >(para afetar especificamente o que está dentro e apenas dentro da ancora, como por exemplo um p dentro de uma main e dentro da main existe uma div que também tem p, com esse caractere especifico no CSS apenas o primeiro p que está apenas dentro do main será afetado), +(esse afeta o irmão mais proximo da ancora), ~(pegará todos os elementos terem o mesmo efeito dentro dessa ancora)</p>
+
+			<p>Para fazer uma modificação matematica envolvendo tamanho, etc. existe a ferramenta calc() onde é aplicada como resposta de caracteristicas que envolvem numeros como resposta, calc funciona da seguinte maneira, logo após a caracteristica, colocamos o calc() e dentro dos parenteses colocamos um valor, espaço, a operação a ser feita(+, -, /, *), espaço e o segundo valor que vai alterar o primeiro; É possivel encadear varios calculos entre os parenteses utilizando mais parenteses dentro, como por exemplo:(40% - ((26px * 4) / 4))</p>
+
+			<p>Quando se trata de portar o site para outras telas, impressão, até mesmo audios, utilizamos uma caracteristica marcada por @ o @media serve para verificar caracteristicas do usuario, como por exemplo, por onde ele está acessando e assim adaptar o site para o usuario em um exemplo:@media screen and (max width: 480px){}; screen é referente ao que será analisado e o entre parenteses o que deve ser levado em consideração na analise e por fim é feito toda uma reestruturação no site o adaptando para um dispositivo movel ou outros aparelhos que possuem caracteristicas diferente de um computador</p>
+
+			<p>Flex-container só funciona organiza os elementos em lista, é dificil trabalhar com dois eixos, nem tudo pode ser aplicado com o display flex e para isso temos o display Grid sem ter muitas alteração, para fazer essa troca existem motivos para sere feita dentre esses motivos tem o fato de que o Flex não consegue trabalhar com dois eixos ao mesmo tempo e que ele não cria espaçamentos precisos, e isso pode ser resolvido até de outra forma, com o margin</p>
+
+			<p>Box Model é todas as bordas envolvidas no elemento sequenciado uma dentro da outra, sendo elas Margin, border, padding e o elemento</p>
+
+			<p>na criação de um site, utilizamos praticamente varios recursos, mas o principal para sua visualização é sem duvidas o display, tanto o grid quanto o flex são essenciais para separar seus conteudos e assim dar uma cara de organizado para o site, por tanto, é necessario ter isso em mente na criação, visualizar a quantidade de colunas, linhas, espaçamento e conteudo dentro de cada uma delas assim podendo as organizar com display grid/flex, justify-content, aling-items, fr, span e gap apenas para a base da pagina </p>
+
+			<p>existe uma especie de elemento que pode ser colocado no inicio do CSS, o :root, ele cria variaveis para facilitar o trabalho, e quando necessario chamar uma de suas variaveis, é usado o var(), nas variaveis podemos colocar cores, fontes de texto</p>
+
+			<p>@import serve para importar outro arquivo junto do Css podendo aplicar varios estilos em apenas um link invés de repetir varias vezes a tag link</p>
+
+			<p>para checkbox existe uma pseudo classe na qual se chama Checked~ ela funciona como um if se ela for selecionada, algo ocorrerá seguindo o exemplo: .classe_botao:checked~.classe_afetada{}</p>
+
+			<p>Podemos aplicar mais de uma classe em um elemente utilizando da mesma estrutura, apenas separando os nomes entre espaços</p>
+
+			<p>quando se trabalha com Mobile first as media querrys tem que ter a propriedade min-width e quando se trabalha com desktop first é feito o contrario, com Max-width</p>
+
+
+			<h2 class="cadernoCSS"><em>Caracteristicas visuais</em></h2>
+			<ul>
+				<li>Font-size = altera o tamanho da fonte medida em pixels</li>
+				<li>Text-Align = se refere ao alinhamento do paragrafo podendo centralizar ele na pagina</li>
+				<li>Background = aplica uma cor hexadecimal como fundo de um texto</li>
+				<li>color = muda a cor da letra</li>
+				<li>src = busca um arquivo externo</li>
+				<li>height = mexe na altura do elemento por px ou %</li>
+				<li>width = mexe na largura por px ou %</li>
+				<li>padding = cria um espaçamento interno em px ou em %(aumenta o conteudo)</li>
+				<li>Margin = Cria um espaçamento externo em px ou em %(aumenta o espaçamento)</li>
+				<li>font-style = altera o estilo da fonte, podendo colocar negrito ou em italico</li>
+				<li>display = altera a visualização entre inline(fecha a linha idependente do espaço que ela ocupa, block(fecha o conteudo no espaço dela) e flex(transforma o elemento em uma Flex-container, que permite todos os elementos descendentes diretos possam ser remanejados) grid(transforma o elemento em um Grid-container que tem quase a mesma utilidade do Flex, porem consegue aplicar coisas que um flex-container não conseguiria e vice versa</li>
+				<li>Text-transform = transforma o texto mudando suas caracteristicas como o visual para parecer maiusculo com Uppercase</li>
+				<li>Font-weight = muda o peso da fonte, podendo colocar a opção negrito(bold) como exemplo</li>
+				<li>Text-decoration = muda a propriedade de exibição do texto(none para tirar as decorações/underline para colocar sublinhado)</li>
+				<li>Position = altera a posição entre static(posição natural dele), absolute(posição absoluta em relação a pagina inteira) e relative(posição relativa ao natural, podendo mexer na posição), utilizando depois as caracteristica de localizão(top,botton,left,right)</li>
+				<li>auto = é um resultado de localização(% ou px) usado para a propria pagina calcular algum tamanho, no exemplo foi pego os valores laterais, somados e divididos por 2 para centralizar  o cabeçalho</li>
+				<li>vertical-align = serve para orientar o alinhamento do texto que muitas vezes segue o alinhamento do texto de baixo e caso o alinhamento deva seguir o texto de cima é usado essa caracteristica junto da orientação que no exemplo da aula foi top</li>
+				<li>Box-sizing = altera a forma vista em que os elementos são colocados, alterando a soma de porcentagem e pixels para que um não afete o outro usando o elemento border-box</li>
+				<li>border-color = dá uma cor à borda</li>
+				<li>border-width = dá uma grossura à borda</li>
+				<li>border-style = dá um estilo à borda, dentre elas temos o solid que é uma barra solida sem muito estilo, temos tbm o Dashed que é o tracejado, o dotted que é pontilhado</li>
+				<li>border-radius(com escolha de direção para ecolher onde arredondar) = essa caracteristica visual, aplica o arredondamento da borda aplicando com uma base matematica no conceito de raio de um circulo e o pondo em pratica com px</li>
+				<li>transition = essa caracteristica define uma transição de efeitos visuais, colocando nela o tempo que a transição dura e onde ela vai se aplicar, colocando o nome do efeito que sofrera a mudança do hover, para fazer uma transição de todos os elementos do item, é usado a resposta all</li>
+				<li>cursor = altera a visualização do cursor, pointer para a suposta mãozinha que é identificavel como item clicavel</li>
+				<li>transform = serve para mudarmos o tamanho(scale() e dentro do parenteses é colocado uma multiplicação de quanto vai ser aumentado proporcionalmente todos os itens) ou o comportamento do elemento(rotate(deg) dentro dos parenteses é colocado a numeração e medida em graus que no inglês é colocado com "Deg" na abreviação)</li>
+				<li>float = essa caracteristica facilita no quesito display e position, uma forma de mesclar um texto e uma imagem na mesma linha, mas sem deixar um espaço em branco que o display deixa ou um trabalho enorme para ter um resultado aceitavel com position, com o float, escolhemos o lado em que a imagem vai ficar e assim fazer com que o conteudo recarregue ao redor do float</li>
+				<li>Clear = essa caracteristica se trata de um oposto do float, pois o float afeta toda a estrutura da pagina e com o clear, podemos delimitar uma area em que o float afeta</li>
+				<li>line-height = altera a altura da linha de texto, criando esse espaçamento</li>
+				<li>linear-gradient = essa caracteristica é aplicada ao lado do background, como resposta, sua estrutura monta um efeito gradiente na selecionando entre parenteses as cores escolhidas para o efeito e separando elas por virgulas, funciona tanto com a nomeclatura da cor quanto com o codigo hexadecimal, colocando porcentagens ao lado das cores, definimos o inicio de cada cor, a ordem posta define a ordem vista; também é possivel alterar a inclinação do gradiente usando no inicio dos parenteses o angulo em deg</li>
+				<li>radial-gradient = funciona da mesma forma que o linear gradient, só que invés de linhas, é feito um gradient redondo</li>
+				<li>Content = aplica entre as aspas um caractere em CSS, necessario o uso dos pseudos elementos After e Before</li>
+				<li>Opacity = essa caracterisca altera a opacidade de um objeto, indo de valores de 1(100%) a 0(0%) para usar valores entre eles, é usado numeros quebrados como por exemplo 0.3 para 30% e assim vai, a opacity também pode ser aplicada em cores, fazendo uma transferencia de hexadeciamal, ou nomeclatura, para rgba() e dentro do parenteses vai a numeração das cores representadas, separadas por virgula, e terá um quarto elemento, conhecido como alpha, mas em uma tradução mais facil de entender, é o valor da opacidade que funciona da mesma forma de 1 a 0</li>
+				<li>Box-shadow = coloca uma sombra no elemento onde os valores colocados após ele são numericos e é composto por 5 valores, o primeiro é o eixo X, o segundo é o eixo Y, e antes que haja alguma pergunta, o terceiro não é um eixo Z já que não temos acesso a um 3D, mas o terceiro se trata do blur da sombra, o quarto é a intensidade da borda que a partir do eixo dela, ela terá um tamanho maior, imagine como se aproximasse uma fonte de luz de um objeto onde a sombra aumenta gradativamente, e por fim o ultimo valor é uma cor que será aplicada na sombra; mesmo envolvendo tantos valores, é possivel aplicar varias sombras, as separando na mesma linha por virgulas e recriando os mesmos 5 valores, podendo aplicar até mesmo opacidade usando o rgba()</li>
+				<li>Inset = sub-caracteristica de Box-shadow, ela é responsavel por fazer a sombra ser projetada internamente do objeto onde os unicos valores usaveis nela são a intensidade e a cor pois esse tipo de sombra não é deslocavel então no lugar dos eixos X e Y colocamos 0 para chegarmos a intensidade</li>
+				<li>text-shadow = funciona da mesma forma que o box shadow, só que aplica em textos</li>
+				<li>box-sizing = ajeita o tamanho de elementos para encaixar sem restrições ao tamanho necessario, caso o elemento seja maior que o pedido e não consiga ser colocado em tal redimensionamento, o Box-sizing criara um overflow onde o conteudo será ajeitado para aquela dimensão</li>
+				<li>Z-index = essa caracteristica é o eixo Z, aquele que mexe com a profundidade de um objeto, com ele podemos puxar objetos a frente de outros utilizando valores numericos base(1,2,3,4...), por padrão todos são definidos como auto, ou seja, todos se agrupam de acordo com as linhas e colocados como 0, caso um tenha o valor maior que esse, logo terá maior destaque,sobrepondo os que estavam a sua frente, dá para fazer um efeito oposto utilizando de numeros negativos, assim os colocando atrás dos auto</li>
+				<li>Justify-content = em uma flex-container, ele é o responsavel em ajeitar horizontalmente os itens usando comandos como flex-start, flex-end, center, sapace-around, space-between e space-evenly; esse tipo de comando apenas realoca itens dentro de um espaço, se o item for maior que o Flex-container, pode não funcionar corretamente</li>
+				<li>Aling-items = se justify é responsavel por realocar horizontalmente os elementos de uma Flex-container, o aling-itens realoca verticalmente, usando dos comands (flex-start, flex-end, center, stretch) vale ressaltar a diferença entre Stretch e center, amabos centralizão os botões mas, enquanto o center centraliza o botão, stretch estica ele para que preencha todo o vertical</li>
+				<li>Flex-wrap = há casos em que um Flex-container tenha muito conteudo, mostrando incapacidade de quebrar a linha automaticamente, o Flex-wrap é o responsavel por essa quebra para alinhar na tela sem cria um scroll lateral na pagina, para isso essa caracteristica tem duas resposta, o nowrap que é a config. padrão dele e o wrap que libera a permisão de quebra de linha</li>
+				<li>Flex-direction = essa caracteristica aplicada em Flex-containers, serve para guiar a direção em que o Flex container vai preencher usando as respostas Row(linha) ou Column(coluna), dependendo do resultado isso pode influencia no Justify-content e Aling-items, os invertento</li>
+				<li>Aling-self/Justify-self = essas duas caracteristicas são aplicadas quando queremos alinhar separadamente um elemento do flex-container, e para isso, ele não é colocado diretamente no CSS, mas sim no HTML com o style, dentro da tag que deseja separar das demais</li>
+				<li>Grid-template-columns = sendo utilizado apenas em Grid-containers ele consegue ajeitar um grid-container na questão de colunas, quantas linhas queremos e o tamanho delas, junto dessa caracteristica, podemos utilizar como resposta uma nova unidade, chamada fr ou fração, essa unidade serve para não utilizarmos numeros exatos como 3 colunas de mesmo tamanho e invés de usar a porcentagem 33.33333... nunca iriamos terminar pois é um resultado constante e infinito, nesse caso utilizamos a fração, colocando 3 vezes o 1fr, a pagina logo entendera que se trata de uma fração de 1/3(um terço)</li>
+				<li>Grid-template-rows = funciona da mesma forma que o grid-template-rows</li>
+				<li>Overflow = especifica quando o conteúdo de um elemento de nivel de bloco deve ser cortado(hidden), exibido com barras de rolagem ou se transborda do elemento.</li>
+				<li>Grid-colums/rows = ele dá uma caracteristica especifica do grid para a coluna/linha que receber essa caracteristica:Span(mescla as celulas do grid espeficando a quantidade de colunas/linhas que deve mesclar) n/n(esse define a possição do item, definindo seu ponto inicial e ponto final, onde o primeiro numero é o ponto inicial e o segundo numero é o ponto final)</li>
+				<li>Gap = cria um espaçamento em um grid, muito semalhante ao margin</li>
+				<li>Background-image = puxa uma imagem utilizando o url() guiando da mesma forma que um src</li>
+				<li>Background-size = define um tamanho da imagem</li>
+				<li>Background-repeat = define se uma imagem irá se repetir ao ser colocada</li>
+				<li>Background-position = define a posição da imagem</li>
+				<li>Grid-template-area/grid-area = essa caracteristica ajuda a reposicionar e ajustar um grid de forma mais facil de executar, o grid-template-area cologa um nome pra cada espaço do grid, e o grid-area dá esses nomes aos elementos assim os posicionando nos espaços de mesma nomeclatura</li>
+				<li>Flex-Grow = Responsavel por aumentar proporcionalmente o tamanho de um elemento utilizando como se fosse uma conta de vezes onde a resposta dele será por quantas vezes o elemento deve crescer(1=vezes 2, 2=vezes 3 e assim por diante) essa caracteristica deve ser aplicado aos filhos de um flex-container invés do proprio, uma coisa que deve ser levada em conta é o fato de que gap, border e padding, influenciam no flex-grow</li>
+				<li>list-style-type:altera o elemento before de uma lista</li>
+			</ul>
+		</main>
+
+		<footer>
+			<p>CSS</p>
+		</footer>
+	</body>
+</h1>
