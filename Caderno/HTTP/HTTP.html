@@ -45,6 +45,35 @@
 
 	<p>Uma sessão HTTP nada mais é que um tempo que o cliente permanece ativo no sistema! Isso é parecido com uma sessão no cinema. Uma sessão, nesse contexto, é o tempo que o cliente usa a sala no cinema para assistir a um filme. Quando você sai da sala, termina a sessão. Ou seja, quando você se desloga, a Alura termina a sua sessão.</p>
 
+	<p>Quando avaliamos um pedido do cliente para servidor, deve se levar em conta que Get é o que é pedido pelo cliente e quando é retirecionado, o Location é o destino para onde o site esta redirecionando</p>
+
+	<p>Status code: são respostas do servidor para o cliente referente aos diversos recursos pedido</p>
+	<ul>
+		<li>200=Tudo certo</li>
+		<li>402=necessário um pagamento para acessar</li>
+		<li>403=cliente não tem permissão de acesso</li>
+		<li>404=conteudo não encontrado</li>
+		<li>301=movido permanentemente(no caso, quando um site redireciona para outro)</li>
+		<li>302=movido temporariamente</li>
+		<li>500=internal Server Error(quando o erro não foi da origem do cliente)</li>
+	</ul>
+
+	<p>O protocolo HTTP define oito métodos de requisição sendo elas GET(recebe um conteudo), POST(envia um conteudo), PUT(atualiza um recurso), DELETE(remove um recurso), HEAD, TRACE, OPTIONS e CONNECT</p>
+
+	<p>Quando acessamos um site, dependendo do que possa acontecer(pesquisa, video,etc.) os recursos recebem meio que uma subcategoria, os parametros que são implemenetados na URL junto dos recursos, sendo separados por um ponto de interrogação"?" e caso haja mais de uma, elas são separadas po "&"</p>
+
+	<p>quando trabalhamos com uma aplicação mobile, na verdade estamos tratando como dois serviços, um do app e outro que traz o HTML para o mobile, e ele pode devolver não só em HTML como também pode devolver em XML ou JSON</p>
+
+	<p>REST(REpresentational State Transfer) é uma maneira de lidar com serviços web através do recurso(URI), operações(Get/Post/Put/Delete) e representação(JSON/XML/HTML)</p>
+
+	<p>Existe uma forma de fazer uma requisição fora do navegador, usando o promp de comando e o codigo curl -v junto com o URL do site que queremos fazer a requisição, usando esse codigo, ele mostrara todo tipo de informação do site, desde os métodos até a própria estrutura do HTML, ele aparece como texto puro e esse conteudo todo é comprimido por um algoritimo do HTTP/2(a versão mais atualizada do HTTP) chamada GZIP</p>
+
+	<P>embora o HTTP/1 também possa fazer essa requisição ao mesmo algoritimo, mas para isso é necessario habilitar nele, outra coisa sobre o HTTP/2 é que ele não manda mais apenas como texto puro, alem de comprimir o texto, ele também transcreve para binario e criptografa o texto, isso já como padrão, outro algoritimo dessa atualização é o HPACK que comprime os Headers da comunicação HTTP, ode deixando mais leve alem de ser Stateful ou seja, guarda informações do Header(não confundir com o serviços dos cookies); O GZIP começou a vir como padrão pois se tornou mais conveniente e com o conceito de otimizar o mercado de trabalho, isso devido a vinda de novos dispositivos, os famosos celulares</p>
+
+	<p>o HTTP/2 tem uma função de Resposta direta, enquanto sua primeira versão é como uma conversa onde o cliente espera a resposta pra abrir coisas como o CSS, Imagens ou até mesmo o JS, o HTTP/2 assim que recebe a requisição de acesso para HTML, ele já envia todo os acessos invés de esperar a requisição do cliente, isso se chama Server Push</p>
+
+	<p>Antes de qualquer requisição, é feito uma conexão chamada TCP e essa conexão é feita a cada requisição, no HTTP1.1, ele tem uma função chamado Keep-Alive que tem como intuito, manter a conexão para fazer assim, diversas requisições, isso ajuda tanto monetariamente quanto na qualidade do serviço porque uma conexão TCP é cara, mas em um acesso, um dominio, qualquer, é feito de 4 a 8 conexões simultaneas, já no HTTP/2 o tempo de espera se torna menor, pois acontece uma troca de informação sem espera de resposta do cliente enviando direto as respostas, a unica espera que tem é da requisição do cliente para assim já enviar a resposta junto com a proxima requisição ou até mesmo antes, esse método se chama Multiplexing</p>
+
 	<h2>P2P=Peer-to-Peer</h2>
 
 	<p>alem do Cliente-servidor(Client-Server), existe o modelo Peer-To-Peer(P2P) onde não utilizao HTTP, fazendo uma analogia mais facil de ententer o Client-Server centraliza o trabalho de palavras isso geraria certos gargalos por isso no P2P o cliente também é o servidor onde cada cliente se torna um ponto do servidor e cada cliente teria sua responsabilidade, um exemplo de P2P é o Torrent onde cada cliente gera seu servidor</p>

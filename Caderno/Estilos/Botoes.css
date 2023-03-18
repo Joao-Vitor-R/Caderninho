@@ -23,6 +23,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1.2);
+  border-image: linear-gradient(to bottom, #cc3700, #1d44b9, #a07918) 1;
 }
 
 .botao2:hover{
