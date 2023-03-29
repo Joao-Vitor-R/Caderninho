@@ -51,6 +51,8 @@
 
 			<p>Para referenciarmos a uma caracteristica direta do HTML, podemos usar a sua atribuição do data-name, usando colchetes [] para puxar o data e sempre entre aspas por se tratar de uma string</p>
 
+			<p>existe 3 armazenadores de dados diferentes, cada um funciona de uma forma diferente, o primeiro é o Local Storage que guarda informaçõesde forma persistente no navegador, sendo em média 5MB de armazenamento, isso depende do navegador utilizado, mas pode ser aumentado pelo usuário quando necessário e apenas alguns navegadores suportam devido aos dados salvos que são apenas strings; O segundo é o Cookies que guardam informação de forma persistente também, só que apenas 4KB de armazenamento por cookie e ele guarda informações de acesso do usuário; Por fim temos o Session Storage que é similar ao local Storage, com a diferença de que os dados salvos não são permanentes, ou seja, fechou o navegador todo o session storage é apagado, pense como se fosse uma memória RAM</p>
+
 			<p>No JavaScript, temos caracteres que representam algo e facilita no entendimento do código</p>
 
 			<h2 class="cadernoJS">Caracteres e seus significados</h2>
@@ -65,6 +67,7 @@
 				<li>agora que sabemos as relações de igualdade, o caractere que denomina a diferenciação é a exclamação seguida de um sinal de igua (!=)</li>
 				<li>para representar o acréssimo "e" usamos duas vezes o sinal de E comercial (&&), por exemplo, if(condição 1 && condição dois) isso para fazer algo em ambas as condições</li>
 				<li>para somar ou subtrair algo, um valor por exemplo, usamos o sinal de mais ou menos, de forma bem simples</li>
+				<li>da mesma forma que o ponto final serve para acessar um objeto, podemos usar esses colchetes [ ] para acessar uma Array</li>
 
 			</ul>
 
@@ -87,7 +90,13 @@
 				<li>indexOf() = acessa o índice de um elemento, no caso o array dele</li>
 				<li>Push()/unshift() = o push adiciona um elemento ao final do array, já para adicionar no inicio do array, podemos usar o unshift</li>
 				<li>pop()/shift()/splice() = pop remove um elemento do final de um array e para retirar do inicio, podemos usar o Shift, mas caso necessario, tem como remover do índice usando o splice, para a remoção usamos o numerador do indice</li>
-				<li></li>
+				<li>Return this = Quando em modo estrito (strict mode), this mantém o valor undefined em funções globais e em funções anônimas que não estão vinculadas a nenhum objeto.</li>
+				<li>window = O window representa uma janela que contém o elemento DOM da página acessada. No objeto window é definida todas variáveis globais e funções que são executadas em um navegador.</li>
+				<li>preventDefault() = ele faz uma interrupção de algo, preveninto o padrão do código</li>
+				<li>createElement() = esse comando é responsavél por criar um novo elemento no html colocando a tag dentro dos parenteses</li>
+				<li>appendChild = Adiciona um nó ao final da lista de filhos de um nó pai especificado. Se o nó já existir no documento, ele é removido de seu nó pai atual antes de ser adicionado ao novo pai.</li>
+				<li>innerHTML = é como uma chave de acesso para o JS fazer mudanças no HTML</li>
+				<li>localStorage.setItem = adiciona um item no local storage, onde as informações ficam armazenadas</li>
 
 			</ul>
 
