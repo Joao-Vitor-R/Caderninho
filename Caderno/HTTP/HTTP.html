@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../reset.css">
+	<link rel="stylesheet" type="text/css" href="../caderno.css">
+	<title>Caderno HTTP</title>
+</head>
+<body>
+
+	<header class="cabecalho_centro">
+		<a href="../acesso-menu.html">
+			<img class="livro__central" src="../HTML-CSS-JS/IMG/caderno.png">
+		</a>
+	</header>
+
+	<h1>Protocolos conhecidos e suas caracteristicas</h1>
+
+	<h2>HTTP=HyperText Transfer Protocol</h2>
+
+	<p>o HTTP segue o modelo Client-Server onde o cliente se trata do navegador(pois ele que enviaas informações) e Servidor que é o profissinal no HTTP vulgo back-end, em uma simplificação o front-end é o cliente e o Back-end é o Servidor</p>
+
+	<p>o papel do HTTP entre o cliente e o servidor é estabelecer regras de comunicação</p>
+
+	<P>em uma requisição, pode se enviar N conteudos que passam por N intermediarios, sejam roteador, firewall, provedor, etc. até chegar ao destino e isso torna a rede menos estavel, pois nada garante a segurança já que o conteudo é enviado como texto puro</P>
+
+	<p>o HTTP por ter essa brecha na segurança tem uma versão chamada HTTPS que junta o HTTP+SSL/TLS= Secure Sockets Layer/Transport Layer Security; Esse protocolo, alem de fazer as funções basicas do HTTP ele também criptografa o texto puro e utiliza de Certificado digital para provar a identidade de um site(aquele cadeado que diz se o site é seguro ou não)</p>
+
+	<p>entidades Certificadoras é um orgão especialista em garantir que os certificados que estão sendo utilizados são confiaveis</p>
+
+	<p>Na criptografia do HTTPS é usado uma Criptografia Assimétrica, onde o cliente tem uma chave publica pra codificar e o servidor tem uma chave privada para decodificar, apesar de ser segura ela é lenta, mas existe uma criptografia simétrica onde invés de chaves diferentes, são usadas chaves iguais, o que torna o processo mais rapido e o HTTPS utiliza de ambas as formas de Criptografar</p>
+
+	<p>quando colocamos o endereço de um site ele sempre mostra coisas que simplesmente ñ temos muito conhecimento WWW(world wide web que informa que está na web) HTTP(o protocolo) o dominio que vem depois dessas duas primeiras, ou seja o nome do site e por fim, temos o .com.br.etc. esses pontos finais mostram as raizes do site se ele é COMercial, se é um site BRasileiro, se é de ORGanização, etc. e obviamente todas essas raizes são apenas a base, pois logo após vem os sub-dominios do site assim ñ se prendendo a apenas um raiz, por exemplo os sites comerciais Brasileiros (.com.br)</p>
+
+	<p>o Dominio se trata apenas de um segundo nome que guiara o usuario ao endereço no qual aquele dominio pertence, por exemplo, no prompt de comando, existe um comando chamado nslookup e o nome do dominio e nesse comando ele mostra o Address do site o URL(Uniform Resource Locator) dele, um exemplo seria o Google, se colocarmos apenas google, o computador não irá entender que se trata do google, pois sua linguagem é diferente, é uma linguagem codificada então com isso em mente, é necessario o servidor DNS(Domain Name System) que grava o dominio, fazendo o mesmo processo que o HTTPS de puxar algo codificado e descodificar pra repassar de forma que o cliente entenda, só que no caso, numa linguagem diferente, o DNS é um armazenamento de dominios e assim cada dominio tem seu endereço para facilitar na busca do site que o cliente quer acessar</p>
+
+	<p>Portas, quando colocamos um endereço e colocamos um dois pontos e um numero(no exemplo da Alura, o 80) seremos redirecionados pela a porta 80 do site alura que no caso é a pagina inicial, mas agora, e se colocarmos outro numero? vai acontecer de cair no erro do site não responder, isso porque a porta não estava aberta, imagine da seguinte maneira, o cliente é uma pessoa e o servidor/site é uma espécie de apartamento, quando o cliente faz a requisisão de entrar em alguma parte de um site é como se ele batesse na porta, se ela abrir ele tem acesso, se não, o cliente fica sem resposta e sem a possibilidade de entrar; E se mudarmos o protocolo de HTTP para HTTPS? simples, o codigo de acesso muda, pensa como se o cliente fosse em outro predio onde a mesma pagina também mora, só que em um apartamento de andar diferente</p>
+
+	<p>Recursos, são as areas do site onde, por exemplo temos a pagina inicial da Alura, mas quando acessamos um curso, vemos que o link aumentou, com alguns elementos entre barras, tais elementos são os recursos que são como sub-palavras-chaves</p>
+
+	<p>Uma URL é uma URI(Uniform Resource Identifier), mas nem todas as URI's são URL's! Existem URI's que identificam um recurso sem definir o endereço, nem o protocolo. Em outras palavras, uma URL representa uma identificação de um recurso (URI) através do endereço, mas nem todas as identificações são URL's.</p>
+
+	<p>O HTTP funciona como um sistema de correios, voçê manda uma informação, o servidor computa e manda de volta é uma troca de cartas entre cliente e servidor, isso em toda pagina, mas e as paginas que exigem uma conta ou alguma informação que seja exclusiva do cliente? simples, o servidor se torna encarregado dessa parte criando uma ID quando o cliente logar na conta e esse ID sempre acaba sendo repassado para o cliente para fazer o login automatico em cada pagina que o cliente abrir e o que salva essas informações são os cookies, tanto que ao apagar os cookies, voçê seria como um desconhecido para os sites no qual tenha uma conta, isso ocorre porque o HTTP é Stateless, ou seja ele não salva informações ele apenas envia</p>
+
+	<p>Uma sessão HTTP nada mais é que um tempo que o cliente permanece ativo no sistema! Isso é parecido com uma sessão no cinema. Uma sessão, nesse contexto, é o tempo que o cliente usa a sala no cinema para assistir a um filme. Quando você sai da sala, termina a sessão. Ou seja, quando você se desloga, a Alura termina a sua sessão.</p>
+
+	<p>Quando avaliamos um pedido do cliente para servidor, deve se levar em conta que Get é o que é pedido pelo cliente e quando é retirecionado, o Location é o destino para onde o site esta redirecionando</p>
+
+	<p>Status code: são respostas do servidor para o cliente referente aos diversos recursos pedido</p>
+	<ul>
+		<li>200=Tudo certo</li>
+		<li>402=necessário um pagamento para acessar</li>
+		<li>403=cliente não tem permissão de acesso</li>
+		<li>404=conteudo não encontrado</li>
+		<li>301=movido permanentemente(no caso, quando um site redireciona para outro)</li>
+		<li>302=movido temporariamente</li>
+		<li>500=internal Server Error(quando o erro não foi da origem do cliente)</li>
+	</ul>
+
+	<p>O protocolo HTTP define oito métodos de requisição sendo elas GET(recebe um conteudo), POST(envia um conteudo), PUT(atualiza um recurso), DELETE(remove um recurso), HEAD, TRACE, OPTIONS e CONNECT</p>
+
+	<p>Quando acessamos um site, dependendo do que possa acontecer(pesquisa, video,etc.) os recursos recebem meio que uma subcategoria, os parametros que são implemenetados na URL junto dos recursos, sendo separados por um ponto de interrogação"?" e caso haja mais de uma, elas são separadas po "&"</p>
+
+	<p>quando trabalhamos com uma aplicação mobile, na verdade estamos tratando como dois serviços, um do app e outro que traz o HTML para o mobile, e ele pode devolver não só em HTML como também pode devolver em XML ou JSON</p>
+
+	<p>REST(REpresentational State Transfer) é uma maneira de lidar com serviços web através do recurso(URI), operações(Get/Post/Put/Delete) e representação(JSON/XML/HTML)</p>
+
+	<p>Existe uma forma de fazer uma requisição fora do navegador, usando o promp de comando e o codigo curl -v junto com o URL do site que queremos fazer a requisição, usando esse codigo, ele mostrara todo tipo de informação do site, desde os métodos até a própria estrutura do HTML, ele aparece como texto puro e esse conteudo todo é comprimido por um algoritimo do HTTP/2(a versão mais atualizada do HTTP) chamada GZIP</p>
+
+	<P>embora o HTTP/1 também possa fazer essa requisição ao mesmo algoritimo, mas para isso é necessario habilitar nele, outra coisa sobre o HTTP/2 é que ele não manda mais apenas como texto puro, alem de comprimir o texto, ele também transcreve para binario e criptografa o texto, isso já como padrão, outro algoritimo dessa atualização é o HPACK que comprime os Headers da comunicação HTTP, ode deixando mais leve alem de ser Stateful ou seja, guarda informações do Header(não confundir com o serviços dos cookies); O GZIP começou a vir como padrão pois se tornou mais conveniente e com o conceito de otimizar o mercado de trabalho, isso devido a vinda de novos dispositivos, os famosos celulares</p>
+
+	<p>o HTTP/2 tem uma função de Resposta direta, enquanto sua primeira versão é como uma conversa onde o cliente espera a resposta pra abrir coisas como o CSS, Imagens ou até mesmo o JS, o HTTP/2 assim que recebe a requisição de acesso para HTML, ele já envia todo os acessos invés de esperar a requisição do cliente, isso se chama Server Push</p>
+
+	<p>Antes de qualquer requisição, é feito uma conexão chamada TCP e essa conexão é feita a cada requisição, no HTTP1.1, ele tem uma função chamado Keep-Alive que tem como intuito, manter a conexão para fazer assim, diversas requisições, isso ajuda tanto monetariamente quanto na qualidade do serviço porque uma conexão TCP é cara, mas em um acesso, um dominio, qualquer, é feito de 4 a 8 conexões simultaneas, já no HTTP/2 o tempo de espera se torna menor, pois acontece uma troca de informação sem espera de resposta do cliente enviando direto as respostas, a unica espera que tem é da requisição do cliente para assim já enviar a resposta junto com a proxima requisição ou até mesmo antes, esse método se chama Multiplexing</p>
+
+	<h2>P2P=Peer-to-Peer</h2>
+
+	<p>alem do Cliente-servidor(Client-Server), existe o modelo Peer-To-Peer(P2P) onde não utilizao HTTP, fazendo uma analogia mais facil de ententer o Client-Server centraliza o trabalho de palavras isso geraria certos gargalos por isso no P2P o cliente também é o servidor onde cada cliente se torna um ponto do servidor e cada cliente teria sua responsabilidade, um exemplo de P2P é o Torrent onde cada cliente gera seu servidor</p>
+
+	<h2>BitTorrent</h2>
+
+	<p>o BitTorrent, alem de ser um protocolo, também é um aplicativo para troca de arquivos na
+	internet</p>
+
+	<h2>SMTP=Simple Mail Transfer Protocol</h2>
+
+	<p>protocolo para enviar e-mails</p>
+
+	<h2>FTP=File Transfer Protocol</h2>
+
+	<p>serve para transferir arquivos</p>
+
+	<h2>POP=Post Office Protocol</h2>
+
+	<p>este protocolo é responsavel por acesso remoto a uma caixa de correio eletrônico</p>
+
+	<h2>SSH=Secure SHell</h2>
+
+	<p>Realiza acessos remotos a outros computaores</p>
+
+	<footer>
+		<p>HTTP</p>
+	</footer>
+</body>
+
+
+</html>

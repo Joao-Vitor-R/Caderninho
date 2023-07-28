@@ -1,0 +1,54 @@
+.cabecalho{
+	background:linear-gradient(35deg,#cc3700, #1d44b9, #a07918);
+	padding: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.cabecalho__nav{
+	display: inline-flex;
+	padding: 0 2em;
+}
+.HTMLnav, .CSSnav, .JSnav{
+	display: inline-block;
+	text-transform: uppercase; 
+	color: black; 
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+	transition: 1s all;
+	border: 3px solid black;
+	border-radius: 7px;
+	padding: 5px 10px;
+}
+
+.HTMLnav:hover{
+	color: #FF4500;
+	border-color: #FF4500;
+	transform: scale(1.2);
+}
+
+.CSSnav:hover{
+	color: #4169E1;
+	border-color: #4169E1;
+	transform: scale(1.2);
+}
+
+.JSnav:hover{
+	color: goldenrod;
+	border-color: goldenrod;
+	transform: scale(1.2);
+}
+
+nav{
+	position: absolute;
+	top: 150px;
+	right: 10%;
+}
+
+.cabecalho_centro{
+	background:linear-gradient(35deg,#cc3700, #1d44b9, #a07918);
+	padding: 20px;
+	display: flex;
+	justify-content: Center;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Caderno HTML</title>
+		<link rel="stylesheet" href="../reset.css">
+		<link rel="stylesheet" href="../Caderno.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header class="cabecalho">
+			<a href=../acesso-menu.html>
+				<img class="livro" src="IMG/caderno.png" alt="caderno">
+			</a>
+				<ul class="cabecalho__nav">
+					<li><a class="HTMLnav" href="CadernoHTML.html">HTML</a></li>
+					<li><a class="CSSnav" href="cadernoCSS.html">CSS</a></li>
+					<li><a class="JSnav" href="cadernoJS.html">Javascript</a></li>
+				</ul>
+		</header>
+		<Main class="Anotaçoes">
+
+			<h1 class="cadernoHTML"><em>Caderno HTML</em></h1>
+
+			<p>Um texto pode muito bem ter varias tags, uma dentro da outra como por exemplo a FRASE DE EXEMPLO na qual o codigo ficaria da seguinte forma ^strong^ FRASE DE ^em^ EXEMPLO ^/em^ ^/strong^</p>
+
+			<p>O <strong>^!DOCTYPE^</strong> é apenas utilizado na primeira linha sendo necessario como informação prioritaria para o navegador, deve ser a primeira coisa que o navegador deve ler na linha de codigo</p>
+
+			<p>A <strong>DOCTYPE</strong> é uma tag de informação enquanto a html é de conteudo e por isso ela não tem a DOCTYPE dentro de si</p>
+
+			<p>Apertando <strong>TAB</strong> no inicio das linhas, o programa apre um espaçamento pra facilitar a leitura do programador sem afetar o a leitura do codigo</p>
+
+			<p><strong>Meta</strong> é uma tag de informação que vai ligada ao navegador, por ñ ter a mesma prioridade que o DOCTYPE ela pode ser colocada dentro do html um comando que pode vir junto do meta é o charset que será apresentado na lista abaixo</p>
+
+			<p>Existe uma subdivisão de tags, chamadas <strong>head</strong> e <strong>body</strong> colocar informações ou conteudo ñ afeta a leitura do computador, mas afeta a organização</p>
+
+			<p>Utilizando uma Anchor é necessario que o arquivo esteja na mesma pasta, a menos que seja direcionado para uma outra pagina da web onde no href é colocado o link da pagina</p>
+
+			<p>É possivel colocar a tag input dentro da label, entre o texto e a propria tag, exemplo:^label^^input^^/label^</p>
+
+			<p>Para tornar um input obrigatorio, usamos um sub-tag dentro do input, chamado required e para colocar um exemplo dentro, é usado a Sub-tag chamada placeholder="(exemplo que queria mostrar)" e nos radio buttons, podemos deixar uma das opções já pré selecionadas colocando em seu input a sub-tag checked, esse mesmo pode ser aplicado em checkbox</p>
+
+			<p>É comum acessarmos sites pelo celular e embora sejam uteis no dia a dia, é necessario comandos especificos que abrem a acessibilidades a eles, para ver sobre isso,abaixo tem um link do site que mostra todos os exemplos para essa acessibilidade e aplicalas nos input</p>
+			<p><a href="http://mobileinputtypes.com">Mobile input type</a></p>
+
+			<p>Falando mais sobre acessibilidade, existe uma forma de alternativa para imagens, caso o usuario tenha dificuldades de entender a imagem, por isso, podemos usar uma sub-tag dentro da img chamada alt, com um texto que pode dar uma visualização melhor para o usuario entender o que é a imagem</p>
+
+			<p>Já aprendemos a importar varias coisas para deixar o site bonito e informativo, agora para importar um mapa, é necessario o uso do google maps, no qual disponibiliza o conteudo de compartilhamento e incorporar, como não queremos compartilhar, vamos incorporar um mapa e lá pegaremos um código html de uma tag chamada iframe, nessa tag, mexendo no html, faremos as mudanças usando caracteristicas de um CSS inline já disponibilizadas pelo proprio codigo copiado, importar videos funciona da mesma maneira, indo na area de compartilhar, tem uma opção de compartilhamento chamdo incorporar que por sua vez tambem dá uma iframe para colocarmos em nosso site</p>
+
+			<p>Podemos ajeitar o site para outros dispositivos usando uma segunda tag meta, essa tag meta vai ser composta por name="viewport" content="width=device-width" assim adaptamos melhor o site para celulares e outros dispositivos e de resto só ajeitar via CSS, para ver o site por um outro aparelho, podemos utilizar a ferramenta de desenvolvedor que possui essa ferramenta especifica de visualização</p>
+
+			<p>Para linkar um item que esteja em uma pasta diferente, usamos a barra "/" para especificar onde está tal elemento, um exemplo é "pasta1/pasta2/elemento" assim o computador vai entender que para chegar até o elemento ele teria que passar por duas pastas</p>
+
+			<p>existe um site chamado SwipeJS no qual aplica um plug-in para a pagina, esse plug-in faz toda uma programação de deslize como nas telas de imagens de jogos na steam, no mesmo site temos tbm o API que mostra alguns exemplos que pode-se aplicar no script</p>
+
+			<h2 class="cadernoHTML"><em>Lista de tags HTML</em></h2>
+			<ul>	
+				<li>H1/h2/h3/h4 = titulo, deixa o texto em tamanho maior e em negrito</li>
+				<li>p = paragrafo</li>
+				<li>Strong = Negrito</li>
+				<li>em = italico</li>
+				<li>!DOCTYPE (versão do HTML) = declara ao navegador a versão utilizada na pagina</li>
+				<li>html = tudo dentro dela marca o que vira a ser renderizado no navegador e deve ser a primeira e a ultima tag, pois é uma tag de conteudo,ficando abaixo apenas da DOCTYPE</li>
+				<li>Meta = passa informação para o navegador</li>
+				<li>charset = (informação)sendo uma informação ela vai dentro da tag meta ou de outras tags de mesma função, serve para definir um caractere da pagina, na aula foi utilizado da seguinte forma, charset="UTF-8" pra definir caracteres brasileiros como acentuação</li>
+				<li>Lang = outra tag de informação que informa ao navegador a linguagem da pagina sem a necessidade de oferecer tradução; essa tag vai junto da html</li>
+				<li>Title = altera o nome mostrado na aba do navegador</li>
+				<li>Head = vai todas as tags de informação</li>
+				<li>body = vai todas as tags de conteudo</li>
+				<li>Link = faz uma ligação entre dois arquivos utilizando as palavras chave rel(para dizer o relacionamento) e href(pra dizer a localização do arquivo)</li>
+				<li>IMG = essa tag tem o objetivo de aplicar imagens, uma tag de imagens em resumo</li>
+				<li>ul/ol = ul pra listas não ordenadas e ol para listas ordenadas, numerando cada item e para separar cada item, é usado a tag li com abertura e fechamento</li>
+				<li>div = essa tag é referente a divisão, ela não tem o objetivo de interfirir estéticamente na pagina, apenas separar as marcações em blocos</li>
+				<li>Header = é a tag responsavel pelo cabeçalho, sendo meio que a primeira informação a ser vista na pagina tendo nome da pagina e se cabivel informações importantes</li>
+				<li>A = é uma tag de conteudo,ela abre e fecha e é a abreviação de Anchor que tem o intuito de transformar em um link e para isso ela utiliza da tag de referencia href</li>
+				<li>Main = tag responsavel por separar o conteudo do cabeçalho, algo parecido com o header, mas focado para o resto da pagina</li>
+				<li>Footer = assim como a Header e a main, essa tag é responsavel por uma divisão do site, nesse caso, é referente ao rodapé</li>
+				<li>Form = tag para separar uma area de formulario</li>
+				<li>Input = tag que cria e especifica o tipo e o nome do formulario, dentro dessa tag, vai os seguintes conteudos, type para definir o tipo de imput (text para colocar uma informação escrita/radio para usar a marcação redonda, normalmente usada como resposta de multipla escolha/checkbox para caixa de marcação que pode retirar a marcação), name para definir o grupo do input, Value para darmos um valor ao input e id no caso apenas para adicionar uma ligação ao label</li>
+				<li>label = essa tag sempre esta junto da input, sendo uma tag de texto para formularios, um titulo por assim dizer, ele é acompanhada com um for para assim interligar com o input que tiver o id de mesmo nome que essa configuração</li>
+				<li>textarea = serve para criar uma area de texto na qual para impor tamanhos nela, é usado sub-comandos dentro da tag, cols para a largura(numero de colunas) e rows para altura(numero de linhas)</li>
+				<li>select = assim como no form, separa uma area só que para um caixa de seleção ao estilo drop down</li>
+				<li>option = essa tag é a que completa a select, apresentando os conteudos da caixa de seleção, essas duas tags funcionam como as listas, com a tag select sendo o equivalente ao ul/ol e o option sendo o equivalente ao li</li>
+				<li>Fieldset = é uma tag similar a div, mas é focada para aplicação de informações e nela, invés de colocarmos P para separar uma linha de titulo, usamos uma outra tag chamada Legend</li>
+				<li>Legend = tag responsavel por dar um "titulo" a um Fieldset</li>
+				<li>Table = essa tag, asim como div, form e até ul/ol, é uma tag de identificação, no caso, identifica os itens como uma tabela os agrupando com os comando tr e td</li>
+				<li>tr = aplica uma linha na tabela, quanto mais itens na vertical tiver, mais tr deve haver dentro do table</li>
+				<li>td = se o tr aplica uma linha na tabela, o td aplica uma coluna e com ambas definidas, td também tem a responsabilidade de portar o conteudo de cada caixa da tabela, em uma analise total desses ultimos 3 itens lidos, temos table que carrega tr que carrega td e o td assim como o tr é repetivel, quanto mais itens na horizontal tiver, mais td deve haver dentro do tr</li>
+				<li>thead/tbody/tfoot = essas são tags para deixar a tabela mais semantica onde o thead separa o cabeçalho e no cabeçalho da tabela usamos outra tag para as linhas, já o tbody não altera nada, apenas avisa ao navegador que aquele é o conteudo da tabela</li>
+				<li>th = assim como o td, o th é responsavel pela coluna da tabela, nada muda de uma pra outra, exceto que uma é identificada como uma coluna de conteudo(td) e a outra como de cabeçalho da tabela, assim ela centraliza os itens do cabeçalho de forma automatica</li>
+				<li>Colspan = essa sub-tag de td serve para um preenchimento de celula da tabela</li>
+				<li>section = falando um pouco mais sobre as formas de divisão, Section é uma tag de divisão onde separa os conteudos mais completos, por exemplo o titulo e o texto serem os mesmos, quando o conteudo dela for semantica</li>
+				<li>article = representa uma composição idependente em um documento, pagina, aplicação, ou site, ou que é destinado a ser distribuido de forma idependente ou reutilizável</li>
+				<li>button = é utilizada para inserir interatividade em uma página ou formulário e tem como função executar uma determinada ação ao receber um clique do usuario, ação essa que é definada via JavaScript</li>
+				<li>Span = serve para que você seja capaz de representar elementos visuais destacados de um todo e não representa nada por natureza</li>
+				<li>Audio = essa tag é responsavel por criar a estrutura de um audio, mas ele não aparece tão facilmente, utilizando atributos na tag como src(para dizer qual som será reproduzido) e Controls, que irá por sua vez criar uma estrutura de controle para ser interagivel, com o CSS de estilo dos classicos players de navegador, vale ressaltar que em certos navegadores esse player muda a aparencia, então ter ciencia disso é util para a interface do usuario e para dificultar o que já é complicado, é muito dificil alterar o player com CSS</li>
+				<li>data- = essa sub-tag serve é aplicada no HTML, mas influencia diretamente no JS, o propósito do data é dar um nome idependente do texto da tag, por exemplo no texto da tag é "mais", mas no java voçê quer simplificar colocando o sinal de mais(+) então para isso, colocamos o data-(nome de preferencia para o data)="(nome referenciado no JS)" ficando mais ou menos assim ^label data-texto="+"^Mais^/label^, podemos só colocar até o nome da data para ser usado só como referencia</li>
+			</ul>
+		</Main>
+
+		<footer>
+			<p>HTML</p>
+		</footer>
+	</body>
+</html>
